@@ -15,61 +15,223 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">About Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
 
-    </section>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/projects" class="cs-button-solid">Our Projects</a>
+<section id="sbs-1362">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/test5-m.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/test5.png">
+                <img loading="lazy" decoding="async" src="/assets/images/test5.png" alt="people" width="605" height="690">
+            </picture>
+            <div class="cs-box">
+                <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/gear-white.svg" alt="people" width="60" height="60">
+                <span class="cs-desc">
+                    We’ve Over 26 Years of Experience
+                </span>
             </div>
         </div>
-    </section>
+        <div class="cs-content">
+            <span class="cs-topper">Transparent Pricing, Exceptional Service</span>
+            <h2 class="cs-title">Our Pricing is very competitive</h2>
+            <p class="cs-text">
+                <strong>We only have two fees.</strong> We have a <strong>leasing fee of $750</strong>
+                that is taken from the first month of rent. From that
+                $750, we offer $400 as a commission to whoever brings
+                us the tenant. This gets your house on MLS and leased
+                quicker than our competition who typically pay $200
+                from their leasing fee. The leasing fee is for finding the
+                tenant and is for all the work, advertising, screening,
+                etc. up to the tenant moving into the property. Once
+                moved in, <strong>our management fee is 10%</strong> of the collected
+                rent per month (or a $100 minimum).
+            </p> 
+                
+            <p class="cs-text">    
+                There are no other
+                fees for lease renewal, admin fees, set up fees,
+                advertising, etc. It’s very simple, nothing up front and
+                once leased the leasing fee comes from the first month
+                of rent. When all the misc. fees others charge are
+                added into the equation, we are very competitively
+                priced. You can find property managers that will
+                “manage” your property for $50 per month but cheap is
+                not usually your best choice.            
+            </p>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trophy.svg" alt="icon" width="32" height="32">
+                        Quality Service Garuanteed
+                    </h3>
+                    <p class="cs-item-text">
+                        Our commitment to your satisfaction is unwavering. If for any reason you're not completely satisfied with our services, we offer a <strong>$0 cancellation policy</strong>. Your peace of mind and satisfaction are our top priorities.                
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <img class="h3-cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-check.svg" alt="icon" width="32" height="32">
+                        Zero Upcharge On Maintenance
+                    </h3>
+                    <p class="cs-item-text">
+                        Our vendors provide discounts without any upcharge fees, which saves you more money without sacrificing quality of service. We prioritize cost-effective solutions and excellent service to enhance your experience.
+                    </p>
+                </li>
+            </ul>
+            <h2 class="cs-title">Top Reasons To Hire Us</h2>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+                    We're a family-owned, local, full-service property management company.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+                    Unlike our competitors, we don't upcharge for repairs and have a $0 cancellation fee
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+                    Our outstanding reputation is reinforced by our flawless Google reviews
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+                    This isn't our first year in business, we've been managing property in Surprise Arizona for over 17+ years.
+                </li>
+            </ul>
+            <a href="/contact" class="cs-button-solid">Contact Us Today</a>
+        </div>
+    </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-1672">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Our Customer Reviews</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot1.jpeg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                    </picture>
+                    <span class="cs-name">
+                        Chris & Kesi Holbrook
+                        <span class="cs-job">Renter</span>
+                    </span>
+                </div>
+                <div class="wrapper">
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
+                    <p class="cs-review">
+                        We currently rent a property from SunSeeker Rentals. The owners, Ken and Cindi, have taken the time to visit our property, have conversations with us and look out for our best interests. This speaks volumes for the type of people they are. When we have had issues/concerns with the property, every staff member we’ve dealt with has been professional and responds in a timely manner. Their website is easy to use to submit payments, maintenance requests, etc. The service, professionalism and overall general kindness of each staff member has been exceptional!                    </p>
+                </div>
+                <!--Quote Icon-->
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/review2.png" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                    </picture>
+                    <span class="cs-name">
+                        Tyler Downey
+                        <span class="cs-job">Homeowner</span>
+                    </span>
+                </div>
+                <div class="wrapper">
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
+                    <p class="cs-review">
+                        Our experience as landlords with SunSeeker has been easy and straightforward. Ken has always been extremely responsive. Everything from the listing to tenancy has so far been smooth with no issues. They just take care of things, and I find I completely forget I own a home I'm leasing out.                    </p>
+                    </br>
+                </br>
+            </br>
+        </br>
+    </br>
+</br>
+</br>
+</br>
+                    </div>
+                <!--Quote Icon-->
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot2.jpeg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                    </picture>
+                    <span class="cs-name">
+                        Ryan White
+                        <span class="cs-job">Homeowner</span>
+                    </span>
+                </div>
+                <div class="wrapper">
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
+                    <p class="cs-review">
+                        A very PROFESSIONAL, responsive, and HONEST company. Every employee that I have worked with has proved they deserve my business. This is a company that will protect your interests! Strongly recommend especially if you want to live or rent in the wonderful Estrella Mountain Ranch community.                    </p>
+                    </br>
+                </br>
+            </br>
+        </br>
+    </br>
+</br>
+</br>
+</br>
+                    </div>
+                <!--Quote Icon-->
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-481">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="/assets/images/property-management-surprise.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/property-management-surprise.webp">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/property-management-surprise.webp" alt="leaf" width="522" height="551">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Property management is ingrained in our family's heritage
+            </span>
+            <h2 class="cs-title">In business since 1989</h2>
+            <p class="cs-text">
+                My father owned about 70 rental properties and as a
+                child I was always around rental homes. My rental
+                background was born from helping him with minor
+                maintenance issues, and then to full blown rent
+                collection for his 70 properties at the age of 16. Once I
+                graduated from Missouri Southern State University, I
+                immediately started my own company in Missouri in
+                1989. For most of the past 22 years I have owned 120
+                rental houses myself and managed another 70+ for
+                other clients. I have also developed several
+                subdivisions, strip malls, and built several hundred
+                homes (some of which I kept as rentals for myself).
+                Rental homes and property management is all I've
+                known all my working life and I am good at it. My wife
+                Cindi joined me in the business 12 years ago after our
+                youngest started school. Cindi has a remarkable
+                personality and does very well with marketing to and
+                taking care of the tenants and property management
+                clients. </p>
+            <a href="/contact" class="cs-button-solid">Learn More</a>
+        </div>
+    </div>
+</section>
 
     {% include 'components/cta.html' %}
 

@@ -3,17 +3,18 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #banner-1403 {
+  #banner-1519 {
     padding: var(--sectionPadding);
     /* 190px - 268px */
     padding-top: clamp(11.875rem, 25vw, 16.75rem);
-    padding-bottom: 6.25rem;
+    /* 100px - 150px */
+    padding-bottom: clamp(6.25rem, 12vw, 9.375rem);
     /* clips the line from causing overflow issues for going off screen */
     overflow: hidden;
     position: relative;
     z-index: 1;
   }
-  #banner-1403 .cs-container {
+  #banner-1519 .cs-container {
     text-align: center;
     width: 100%;
     max-width: 80rem;
@@ -25,51 +26,54 @@
     /* 8px - 12px */
     gap: clamp(0.5rem, 1vw, 0.75rem);
   }
-  #banner-1403 .cs-int-title {
+  #banner-1519 .cs-int-title {
     /* 39px - 61px */
     font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
     font-weight: 900;
     line-height: 1.2em;
     text-align: inherit;
     margin: 0;
-    color: var(--bodyTextColorWhite);
+    color: var(--headercolor);
     position: relative;
   }
-  #banner-1403 .cs-breadcrumbs {
+  #banner-1519 .cs-breadcrumbs {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  #banner-1403 .cs-link {
+  #banner-1519 .cs-link {
     font-size: 1rem;
     line-height: 1.2em;
     text-decoration: none;
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColor);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  #banner-1403 .cs-link:last-of-type::after {
+  #banner-1519 .cs-link:last-of-type {
+    /* remove the chevron on the last list item */
+  }
+  #banner-1519 .cs-link:last-of-type::after {
     display: none;
   }
-  #banner-1403 .cs-link:after {
+  #banner-1519 .cs-link:after {
     /* chevron */
-    content: "";
+    content: '';
     width: 0.4375rem;
     height: 0.75rem;
     margin: 0 1rem;
-    background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/white-chev.svg");
+    background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-chevron.svg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     display: block;
   }
-  #banner-1403 .cs-link.cs-active {
+  #banner-1519 .cs-link.cs-active {
     color: var(--primary);
   }
-  #banner-1403 .cs-background {
+  #banner-1519 .cs-background {
     width: 100%;
     height: 100%;
     display: block;
@@ -78,34 +82,20 @@
     left: 0;
     z-index: -1;
   }
-  #banner-1403 .cs-background:before {
+  #banner-1519 .cs-background:before {
     /* gradient overlay */
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
-    background: #000;
-    opacity: 0.4;
+    background: #FFF3EC;
+    opacity: 0.8;
     position: absolute;
     display: block;
     top: 0;
     left: 0;
     z-index: 1;
   }
-  #banner-1403 .cs-background:after {
-    /* gradient overlay */
-    content: "";
-    width: 100%;
-    height: 40%;
-    background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(rgba(0, 0, 0, 0)));
-    background: -o-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0) 100%);
-    background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0) 100%);
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: 2;
-  }
-  #banner-1403 .cs-background img {
+  #banner-1519 .cs-background img {
     position: absolute;
     top: 0;
     left: 0;
@@ -114,15 +104,23 @@
     /* Makes img tag act as a background image */
     object-fit: cover;
   }
+  #banner-1519 .cs-mask {
+    --maskBG: #ffffff;
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    z-index: 100;
+  }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #banner-1403 .cs-background:before {
-    width: 50%;
+  #banner-1519 .cs-background:before {
+    width: 100%;
     height: 100%;
-    background: -webkit-gradient(linear, left top, right top, from(#000000), to(rgba(0, 0, 0, 0)));
-    background: -o-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0) 100%);
-    background: linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, rgba(255, 243, 236, 0.9) 23.05%, rgba(255, 243, 236, 0) 80.08%);
     opacity: 1;
   }
 }
@@ -367,43 +365,28 @@
   }
 }
 /*-- -------------------------- -->
-<---    Google Maps Iframe      -->
+<---            FAQ             -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #map-1403 iframe {
-    width: 100%;
-    /* 400px - 560px */
-    height: clamp(25rem, 42vw, 35rem);
-    margin-top: 2rem;
-  }
-}
-/*-- -------------------------- -->
-<---          Reviews           -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #reviews-1403 {
-    /* centers the button */
-    text-align: center;
+  #faq-1582 {
     padding: var(--sectionPadding);
-    /* clips the orbs from causing overflow issues */
-    overflow: hidden;
     position: relative;
     z-index: 1;
   }
-  #reviews-1403 .cs-container {
+  #faq-1582 .cs-container {
     width: 100%;
-    /* changes to 1024px at tablet */
-    max-width: 36.5rem;
+    /* changes to 1280px at talet */
+    max-width: 34.375rem;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
+    gap: clamp(3rem, 5vw, 4rem);
+    position: relative;
   }
-  #reviews-1403 .cs-content {
+  #faq-1582 .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: center;
     width: 100%;
@@ -412,116 +395,131 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
   }
-  #reviews-1403 .cs-topper {
-    font-size: var(--topperFontSize);
-    line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: inherit;
-    letter-spacing: 0.1em;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.25rem;
-    display: block;
-  }
-  #reviews-1403 .cs-title {
-    font-size: var(--headerFontSize);
-    font-weight: 900;
-    line-height: 1.2em;
-    text-align: inherit;
-    max-width: 43.75rem;
-    margin: 0 0 1rem 0;
-    color: var(--headerColor);
-    position: relative;
-  }
-  #reviews-1403 .cs-title {
-    max-width: 20ch;
+  #faq-1582 .cs-title {
     margin: 0;
   }
-  #reviews-1403 .cs-card-group {
+  #faq-1582 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #faq-1582 .cs-item {
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    /* 20px - 32px */
+    padding: clamp(1.25rem, 2.3vw, 2rem);
+    background-color: #F7F7F7;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+  }
+  #faq-1582 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #faq-1582 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    transition: color 0.3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #faq-1582 .cs-container {
+    max-width: 80rem;
+  }
+  #faq-1582 .cs-item {
+    grid-column: span 6;
+  }
+}
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-1672 {
+    padding: var(--sectionPadding);
+  }
+  #reviews-1672 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 40px - 64px */
+    gap: clamp(2.5rem, 4.5vw, 4rem);
+  }
+  #reviews-1672 .cs-content {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #reviews-1672 .cs-title {
+    margin: 0rem;
+  }
+  #reviews-1672 .cs-card-group {
     width: 100%;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     /* 16px - 20px */
-    gap: clamp(1rem, 2.5vw, 1.15rem);
+    gap: clamp(1rem, 2.5vw, 1.25rem);
   }
-  #reviews-1403 .cs-item {
+  #reviews-1672 .cs-item {
     list-style: none;
-    text-align: left;
-    /* 20px - 60px */
-    padding: clamp(1rem, 4vw, 3.75rem);
-    background-color: #fff;
-    /* 12px - 24px */
-    border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
+    width: 100%;
+    /* 20px - 40px top & bottom */
+    /* 20px - 40px left & right */
+    padding: clamp(1.25rem, 3.15vw, 2.5rem) clamp(1.25rem, 3.15vw, 2.5rem);
+    background-color: #f7f7f7;
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
-    /* clips the pseudo box from overflowing */
-    overflow: hidden;
     display: flex;
     grid-column: span 12;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     position: relative;
-    z-index: 1;
+    /* 24px - 48px */
+    gap: clamp(1.5rem, 4vw, 3rem);
   }
-  #reviews-1403 .cs-item:before {
-    /* background color */
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: var(--primary);
-    opacity: 0.05;
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    /* prevents the mouse from interacting it */
-    pointer-events: none;
-  }
-  #reviews-1403 .cs-quote {
-    /* 72px - 120px */
-    width: clamp(4.5rem, 10vw, 7.5rem);
-    height: auto;
-    /* 32px - 64px */
-    margin-bottom: clamp(2rem, 6vw, 4rem);
-    display: block;
-  }
-  #reviews-1403 .cs-item-text {
-    /* 16px - 25px */
-    font-size: clamp(1rem, 2.6vw, 1.5625rem);
-    line-height: 1.2em;
-    font-weight: bold;
-    margin: 0;
-    /* 24px - 64px */
-    margin-bottom: clamp(1.5rem, 6vw, 4rem);
-    color: var(--bodyTextColor);
-  }
-  #reviews-1403 .cs-flex-group {
-    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+  #reviews-1672 .cs-flex-group {
+    /* this margin top auto will push everything up and force the cs-flex-group to the bottom of the container. This is to account for review cards with different heights because of more or less text and makes the cards more responsive to changing text */
     margin-top: auto;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    /* 8px - 24px */
-    gap: clamp(0.8rem, 1.5vw, 1rem);
+    align-items: flex-start;
+    gap: 0.75rem;
   }
-  #reviews-1403 .cs-profile {
-    /* 40px - 52px */
-    width: clamp(2.5rem, 5vw, 3.25rem);
-    height: clamp(2.5rem, 5vw, 3.25rem);
-    margin: 0;
+  #reviews-1672 .cs-profile {
+    width: 3.25rem;
+    height: auto;
     border-radius: 50%;
-    box-sizing: border-box;
-    border: 2px solid #fff;
-    /* clips image corners to make circle */
-    overflow: hidden;
     position: relative;
     display: block;
   }
-  #reviews-1403 .cs-profile img {
+  #reviews-1672 .cs-profile img {
     position: absolute;
     top: 0;
     left: 0;
@@ -530,31 +528,55 @@
     /* makes the image behave like a background image */
     object-fit: cover;
   }
-  #reviews-1403 .cs-name {
-    /* 16px - 25px */
-    font-size: clamp(1rem, 2.5vw, 1.5625rem);
+  #reviews-1672 .cs-name {
+    /* 20px - 25px */
+    font-size: 1.25rem;
     line-height: 1.2em;
     font-weight: 700;
     margin: 0;
+    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+    margin-top: auto;
     color: var(--headerColor);
     display: block;
   }
-  #reviews-1403 .cs-job {
+  #reviews-1672 .cs-job {
     /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-size: 1rem;
     line-height: 1.5em;
     font-weight: 400;
     margin: 0;
-    color: #746f95;
+    color: var(--bodyTextColor);
     display: block;
+  }
+  #reviews-1672 .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #reviews-1672 .cs-item-stars {
+    width: 6.75rem;
+    height: auto;
+  }
+  #reviews-1672 .cs-review {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1.25rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    z-index: 1;
+  }
+  #reviews-1672 .cs-quote {
+    width: 5.375rem;
+    height: auto;
+    position: absolute;
+    right: 0rem;
+    bottom: 0rem;
+    z-index: 0;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #reviews-1403 .cs-container {
-    max-width: 80rem;
-  }
-  #reviews-1403 .cs-item {
-    grid-column: span 6;
+  #reviews-1672 .cs-item {
+    grid-column: span 4;
   }
 }
