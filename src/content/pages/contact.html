@@ -12,31 +12,9 @@ permalink: 'contact/'
 {% endblock %}
 
 {% block body %}
-                   
-<!-- ============================================ -->
-<!--                   Banner                     -->
-<!-- ============================================ -->
 
-<div id="banner-1519">
-    <div class="cs-container">
-        <span class="cs-int-title">Contact Us</span>
-        <div class="cs-breadcrumbs">
-            <a href="" class="cs-link">Home</a>
-            <a href="" class="cs-link cs-active">About</a>
-        </div>
-    </div>
-    <!--Background Image-->
-    <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="/assets/images/hero.png">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="/assets/images/hero.png">
-        <img decoding="async" src="/assets/images/hero.png" alt="people laughing" width="1280" height="568" aria-hidden="true">
-    </picture>
-    <svg class="cs-mask" xmlns="http://www.w3.org/2000/svg" width="1920" height="136" viewBox="0 0 1920 136" fill="none">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="var(--maskBG)"/>
-    </svg>
-</div>
+{% include 'components/banner.html' %}
+                   
                                 
 <!-- ============================================ -->
 <!--                   Contact                    -->
@@ -107,75 +85,6 @@ permalink: 'contact/'
 </section>
 
 <!-- ============================================ -->
-<!--                      FAQ                     -->
-<!-- ============================================ -->
-
-<section id="faq-1582">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">FAQ</span>
-            <h2 class="cs-title">Frequently Asked Questions</h2>
-        </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">1. How do I place an order?</h3>
-                    <p class="cs-item-text">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat impedit molestias vitae voluptatibus sed enim! Cupiditate ab praesentium dolorem libero veritatis beatae assumenda totam, in, nemo quis consectetur labore!
-                    </p>
-                </div>
-            </li>
-            <li class="cs-item">
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">2. What payment methods do you accept?</h3>
-                    <p class="cs-item-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat impedit molestias vitae voluptatibus sed enim! Cupiditate ab praesentium dolorem libero veritatis beatae assumenda totam, in, nemo quis consectetur labore!
-                    </p>
-                </div>
-            </li>
-            <li class="cs-item">
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">3. How can I track my order?</h3>
-                    <p class="cs-item-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat impedit molestias vitae voluptatibus sed enim! Cupiditate ab praesentium dolorem libero veritatis beatae assumenda totam, in, nemo quis consectetur labore!
-                    </p>
-                </div>
-            </li>
-            <li class="cs-item">
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">4. What is your return policy?</h3>
-                    <p class="cs-item-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat impedit molestias vitae voluptatibus sed enim! Cupiditate ab praesentium dolorem libero veritatis beatae assumenda totam, in, nemo quis consectetur labore!
-                    </p>
-                </div>
-            </li>
-            <li class="cs-item">
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">5. Do you offer international shipping?</h3>
-                    <p class="cs-item-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat impedit molestias vitae voluptatibus sed enim! Cupiditate ab praesentium dolorem libero veritatis beatae assumenda totam, in, nemo quis consectetur labore!
-                    </p>
-                </div>
-            </li>
-            <li class="cs-item">
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">6. How can I contact customer support?</h3>
-                    <p class="cs-item-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat impedit molestias vitae voluptatibus sed enim! Cupiditate ab praesentium dolorem libero veritatis beatae assumenda totam, in, nemo quis consectetur labore!
-                    </p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
-
-<!-- ============================================ -->
 <!--                   Reviews                    -->
 <!-- ============================================ -->
 
@@ -187,6 +96,7 @@ permalink: 'contact/'
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
+                <a href="https://www.valleyofthesunrentals.com/home.html">
                 <div class="cs-flex-group">
                     <picture class="cs-picture">
                         <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot1.jpeg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
@@ -207,6 +117,8 @@ permalink: 'contact/'
             </br>
         </br>
     </br>
+        </br>
+    </br>
 </br>
 </br>
 </br>
@@ -217,8 +129,10 @@ permalink: 'contact/'
                 </div>
                 <!--Quote Icon-->
                 <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
-            </li>
+            </a>
+        </li>
             <li class="cs-item">
+                <a href="https://www.valleyofthesunrentals.com/home.html">
                 <div class="cs-flex-group">
                     <picture class="cs-picture">
                         <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/review2.png" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
@@ -232,11 +146,15 @@ permalink: 'contact/'
                     <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
                     <p class="cs-review">
                         When I was looking to purchase an investment property I did a bunch of research of companies in the area. SunSeekers stood out due to their positive reviews and years in business. When I reached out, Ken promptly replied back and provided me with extremely helpful feedback on what types of properties I should be looking for and where I should be looking for them. I was blown away with his professionalism and knowledge. I knew instantly that he was the one I wanted representing me and my property. Ken was nice enough to give me feedback on properties that I was interested in purchasing before I had even become a client and paid for any services. Once I was able to purchase a home, Ken took over the property seamlessly.  He was able to rent it not long after it closed and put a quality renter in. My experience went so well that I'm working on a 2nd  purchase in Glendale AZ location again with help from Ken and his team. I have rentals in other locations and not all managements company are as easy and helpful as SunSeekers have been for me. I am very pleased with Ken and SunSeekers  and would recommend them to anyone!!                    </p>
-                </div>
+                    </br>
+                </br>
+                    </div>
                 <!--Quote Icon-->
                 <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
-            </li>
+            </a>
+        </li>
             <li class="cs-item">
+                <a href="https://www.valleyofthesunrentals.com/home.html">
                 <div class="cs-flex-group">
                     <picture class="cs-picture">
                         <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot2.jpeg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
@@ -254,10 +172,14 @@ permalink: 'contact/'
                 </br>
             </br>
         </br>
+    </br>
+</br>
+</br>
                 </div>
                 <!--Quote Icon-->
                 <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
-            </li>
+            </a>
+        </li>
         </ul>
     </div>
 </section>

@@ -470,6 +470,9 @@
   #reviews-1672 {
     padding: var(--sectionPadding);
   }
+  #reviews-1672 a {
+    text-decoration: none;
+  }
   #reviews-1672 .cs-container {
     width: 100%;
     max-width: 80rem;
@@ -568,6 +571,7 @@
   #reviews-1672 .cs-item-stars {
     width: 6.75rem;
     height: auto;
+    margin-top: 1rem;
   }
   #reviews-1672 .cs-review {
     /* 14px - 16px */

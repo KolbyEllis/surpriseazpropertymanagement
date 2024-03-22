@@ -950,7 +950,7 @@
     position: absolute;
     height: 100%;
     width: 0%;
-    background: #000;
+    background: var(--primary);
     opacity: 1;
     top: 0;
     left: 0;
@@ -1284,7 +1284,7 @@
     position: absolute;
     height: 100%;
     width: 0%;
-    background: #000;
+    background: var(--primary);
     opacity: 1;
     top: 0;
     left: 0;
@@ -1294,6 +1294,7 @@
   }
   #cta-403 .cs-button-solid:hover:before {
     width: 100%;
+    background-color: var(--primary);
   }
 }
 /* Tablet - 768px */

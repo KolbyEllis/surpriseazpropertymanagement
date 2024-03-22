@@ -1,130 +1,4 @@
 /*-- -------------------------- -->
-<---          Banner            -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #banner-1519 {
-    padding: var(--sectionPadding);
-    /* 190px - 268px */
-    padding-top: clamp(11.875rem, 25vw, 16.75rem);
-    /* 100px - 150px */
-    padding-bottom: clamp(6.25rem, 12vw, 9.375rem);
-    /* clips the line from causing overflow issues for going off screen */
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-  }
-  #banner-1519 .cs-container {
-    text-align: center;
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    /* 8px - 12px */
-    gap: clamp(0.5rem, 1vw, 0.75rem);
-  }
-  #banner-1519 .cs-int-title {
-    /* 39px - 61px */
-    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-    font-weight: 900;
-    line-height: 1.2em;
-    text-align: inherit;
-    margin: 0;
-    color: var(--headercolor);
-    position: relative;
-  }
-  #banner-1519 .cs-breadcrumbs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #banner-1519 .cs-link {
-    font-size: 1rem;
-    line-height: 1.2em;
-    text-decoration: none;
-    color: var(--bodyTextColor);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #banner-1519 .cs-link:last-of-type {
-    /* remove the chevron on the last list item */
-  }
-  #banner-1519 .cs-link:last-of-type::after {
-    display: none;
-  }
-  #banner-1519 .cs-link:after {
-    /* chevron */
-    content: '';
-    width: 0.4375rem;
-    height: 0.75rem;
-    margin: 0 1rem;
-    background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-chevron.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    display: block;
-  }
-  #banner-1519 .cs-link.cs-active {
-    color: var(--primary);
-  }
-  #banner-1519 .cs-background {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  #banner-1519 .cs-background:before {
-    /* gradient overlay */
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: #FFF3EC;
-    opacity: 0.8;
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  #banner-1519 .cs-background img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    /* Makes img tag act as a background image */
-    object-fit: cover;
-  }
-  #banner-1519 .cs-mask {
-    --maskBG: #ffffff;
-    width: 100%;
-    height: auto;
-    display: block;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    z-index: 100;
-  }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #banner-1519 .cs-background:before {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 243, 236, 0.9) 23.05%, rgba(255, 243, 236, 0) 80.08%);
-    opacity: 1;
-  }
-}
-/*-- -------------------------- -->
 <---          Contact           -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
@@ -365,98 +239,15 @@
   }
 }
 /*-- -------------------------- -->
-<---            FAQ             -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #faq-1582 {
-    padding: var(--sectionPadding);
-    position: relative;
-    z-index: 1;
-  }
-  #faq-1582 .cs-container {
-    width: 100%;
-    /* changes to 1280px at talet */
-    max-width: 34.375rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 5vw, 4rem);
-    position: relative;
-  }
-  #faq-1582 .cs-content {
-    /* set text align to left if content needs to be left aligned */
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: center;
-  }
-  #faq-1582 .cs-title {
-    margin: 0;
-  }
-  #faq-1582 .cs-card-group {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* 16px - 20px */
-    gap: clamp(1rem, 2vw, 1.25rem);
-  }
-  #faq-1582 .cs-item {
-    width: 100%;
-    text-align: left;
-    list-style: none;
-    /* 20px - 32px */
-    padding: clamp(1.25rem, 2.3vw, 2rem);
-    background-color: #F7F7F7;
-    /* prevents padding and border from affecting height and width */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    grid-column: span 12;
-    position: relative;
-    z-index: 1;
-  }
-  #faq-1582 .cs-h3 {
-    font-size: 1.25rem;
-    line-height: 1.2em;
-    font-weight: 700;
-    margin: 0 0 1rem 0;
-    color: var(--headerColor);
-    transition: color 0.3s;
-  }
-  #faq-1582 .cs-item-text {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5em;
-    margin: 0;
-    color: var(--bodyTextColor);
-    transition: color 0.3s;
-  }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #faq-1582 .cs-container {
-    max-width: 80rem;
-  }
-  #faq-1582 .cs-item {
-    grid-column: span 6;
-  }
-}
-/*-- -------------------------- -->
 <---          Reviews           -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #reviews-1672 {
     padding: var(--sectionPadding);
+  }
+  #reviews-1672 a {
+    text-decoration: none;
   }
   #reviews-1672 .cs-container {
     width: 100%;
@@ -556,6 +347,7 @@
   #reviews-1672 .cs-item-stars {
     width: 6.75rem;
     height: auto;
+    margin-top: 1rem;
   }
   #reviews-1672 .cs-review {
     /* 14px - 16px */

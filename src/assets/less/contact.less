@@ -1,150 +1,4 @@
 /*-- -------------------------- -->
-<---          Banner            -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #banner-1519 {
-        padding: var(--sectionPadding);
-        /* 190px - 268px */
-        padding-top: clamp(11.875rem, 25vw, 16.75rem);
-        /* 100px - 150px */
-        padding-bottom: clamp(6.25rem, 12vw, 9.375rem);
-        /* clips the line from causing overflow issues for going off screen */
-        overflow: hidden;
-        position: relative;
-        z-index: 1;
-        
-        .cs-container {
-            text-align: center;
-            width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            /* 8px - 12px */
-            gap: clamp(.5rem, 1vw, .75rem);
-        }
-    
-        .cs-int-title {
-            /* 39px - 61px */
-            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-            font-weight: 900;
-            line-height: 1.2em;
-            text-align: inherit;
-            margin: 0;
-            color: var(--headercolor);
-            position: relative;
-        }
-
-        .cs-breadcrumbs {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .cs-link {
-            font-size: (16/16rem);
-            line-height: 1.2em;
-            text-decoration: none;
-            color: var(--bodyTextColor);
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &:last-of-type {
-                /* remove the chevron on the last list item */
-                &::after {
-                    display: none;
-                }
-            }
-
-            &:after {
-                /* chevron */
-                content: '';
-                width: (7/16rem);
-                height: (12/16rem);
-                margin: 0 (16/16rem);
-                background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-chevron.svg");
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-                position: relative;
-                display: block;
-            }
-
-            &.cs-active {
-                color: var(--primary);
-            }
-        }
-
-        .cs-background {
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-
-            &:before {
-                /* gradient overlay */
-                content: '';
-                width: 100%;
-                height: 100%;
-                background: #FFF3EC;
-                opacity: .8;
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                z-index: 1;
-            }
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                /* Makes img tag act as a background image */
-                object-fit: cover;
-            }
-        }
-
-        .cs-mask {
-            --maskBG: #ffffff;
-
-            width: 100%;
-            height: auto;
-            display: block;
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            z-index: 100;
-        }
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #banner-1519 {
-        .cs-background {
-            &:before {
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(90deg, rgba(255, 243, 236, 0.90) 23.05%, rgba(255, 243, 236, 0.00) 80.08%);
-                opacity: 1;
-            }
-        }
-    }
-}
-                                
-/*-- -------------------------- -->
 <---          Contact           -->
 <--- -------------------------- -*/
 
@@ -388,105 +242,6 @@
 }
 
 /*-- -------------------------- -->
-<---            FAQ             -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #faq-1582 {
-        padding: var(--sectionPadding);
-        position: relative;
-        z-index: 1;
-
-        .cs-container {
-            width: 100%;
-            /* changes to 1280px at talet */
-            max-width: (550/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 5vw, 4rem);
-            position: relative;
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
-
-        .cs-title {
-            margin: 0;
-        }
-
-        .cs-card-group {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            /* 16px - 20px */
-            gap: clamp(1rem, 2vw, 1.25rem);
-        }
-
-        .cs-item {
-            width: 100%;
-            text-align: left;
-            list-style: none;
-            /* 20px - 32px */
-            padding: clamp(1.25rem, 2.3vw, 2rem);
-            background-color: #F7F7F7;
-            /* prevents padding and border from affecting height and width */
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            grid-column: span 12;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cs-h3 {
-            font-size: (20/16rem);
-            line-height: 1.2em;
-            font-weight: 700;
-            margin: 0 0 (16/16rem) 0;
-            color: var(--headerColor);
-            transition: color 0.3s;
-        }
-
-        .cs-item-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            margin: 0;
-            color: var(--bodyTextColor);
-            transition: color 0.3s;
-        }
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #faq-1582 {
-        .cs-container {
-            max-width: (1280/16rem);
-        }
-
-        .cs-item {
-            grid-column: span 6;
-        }
-    }
-}
-                                
-/*-- -------------------------- -->
 <---          Reviews           -->
 <--- -------------------------- -*/
 
@@ -494,6 +249,10 @@
 @media only screen and (min-width: 0rem) {
     #reviews-1672 {
         padding: var(--sectionPadding);
+
+        a {
+            text-decoration: none;
+        }
 
         .cs-container {
             width: 100%;
@@ -605,6 +364,7 @@
         .cs-item-stars {
             width: (108/16rem);
             height: auto;
+            margin-top: 1rem;
         }
 
         .cs-review {

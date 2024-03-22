@@ -159,7 +159,7 @@
     display: block;
     height: 100%;
     width: 0%;
-    background: #1a1a1a;
+    background: var(--primary);
     opacity: 1;
     top: 0;
     left: 0;
@@ -167,7 +167,7 @@
     transition: width 0.3s;
   }
   #sbs-1362 .cs-button-solid:hover {
-    color: var(--primary);
+    color: white;
   }
   #sbs-1362 .cs-button-solid:hover:before {
     width: 100%;
@@ -313,6 +313,9 @@
   #reviews-1672 {
     padding: var(--sectionPadding);
   }
+  #reviews-1672 a {
+    text-decoration: none;
+  }
   #reviews-1672 .cs-container {
     width: 100%;
     max-width: 80rem;
@@ -411,6 +414,7 @@
   #reviews-1672 .cs-item-stars {
     width: 6.75rem;
     height: auto;
+    margin-top: 1rem;
   }
   #reviews-1672 .cs-review {
     /* 14px - 16px */
@@ -496,7 +500,7 @@
     position: absolute;
     height: 100%;
     width: 0%;
-    background: #000;
+    background: var(--primary);
     opacity: 1;
     top: 0;
     left: 0;

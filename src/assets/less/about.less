@@ -174,7 +174,7 @@
                 display: block;
                 height: 100%;
                 width: 0%;
-                background: #1a1a1a;
+                background: var(--primary);
                 opacity: 1;
                 top: 0;
                 left: 0;
@@ -183,7 +183,7 @@
             }
   
             &:hover {
-                color: var(--primary);
+                color: white;
                 &:before {
                     width: 100%;
                 }
@@ -350,6 +350,10 @@
     #reviews-1672 {
         padding: var(--sectionPadding);
 
+        a {
+            text-decoration: none;
+        }
+
         .cs-container {
             width: 100%;
             max-width: (1280/16rem);
@@ -460,6 +464,7 @@
         .cs-item-stars {
             width: (108/16rem);
             height: auto;
+            margin-top: 1rem;
         }
 
         .cs-review {
@@ -557,7 +562,7 @@
                 position: absolute;
                 height: 100%;
                 width: 0%;
-                background: #000;
+                background: var(--primary);
                 opacity: 1;
                 top: 0;
                 left: 0;
