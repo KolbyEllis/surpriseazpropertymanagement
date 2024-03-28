@@ -83,41 +83,6 @@
             color: #fff;
         }
 
-        .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-	    	font-weight: 700;
-            margin: 0;
-            color: #fff;
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-
-            &:before {
-                content: '';
-                position: absolute;
-                display: block;
-                height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: width .3s;
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
-
         .cs-card-group {
             margin: 0;
             padding: 0;
@@ -148,11 +113,6 @@
             position: relative;
             z-index: 1;
 
-        }
-        .cs-icon {
-            width: (48/16rem);
-            height: auto;
-            margin: 0 0 (24/16rem) 0;
         }
 
         .cs-h3 {

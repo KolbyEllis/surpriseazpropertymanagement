@@ -40,39 +40,6 @@
   #services-944 .cs-text:last-of-type {
     margin-bottom: 2rem;
   }
-  #services-944 .cs-button-solid {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-    color: #fff;
-    min-width: 9.375rem;
-    padding: 0 2rem;
-    background-color: var(--primary);
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-  }
-  #services-944 .cs-button-solid:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    background: #000;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
-  }
-  #services-944 .cs-button-solid:hover:before {
-    width: 100%;
-  }
   #services-944 .cs-picture-group {
     width: 100%;
     max-width: 39.375em;
@@ -352,41 +319,6 @@
   #sbs-466 .cs-text:last-of-type {
     margin-bottom: 2rem;
   }
-  #sbs-466 .cs-button-solid {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-    color: #fff;
-    min-width: 9.375rem;
-    padding: 0 1.5rem;
-    background-color: var(--primary);
-    border-radius: 0.25rem;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-  }
-  #sbs-466 .cs-button-solid:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    background: #000;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 0.25rem;
-    transition: width 0.3s;
-  }
-  #sbs-466 .cs-button-solid:hover:before {
-    width: 100%;
-  }
   #sbs-466 .cs-picture {
     width: 100%;
     max-width: 32.625rem;
@@ -519,6 +451,7 @@
     position: relative;
     /* 24px - 48px */
     gap: clamp(1.5rem, 4vw, 3rem);
+    padding-bottom: 5rem;
   }
   #reviews-1672 .cs-flex-group {
     /* this margin top auto will push everything up and force the cs-flex-group to the bottom of the container. This is to account for review cards with different heights because of more or less text and makes the cards more responsive to changing text */
@@ -592,7 +525,30 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #reviews-1672 .cs-item {
-    grid-column: span 4;
+  #reviews-1672 {
+    list-style: none;
+    width: 100%;
+    /* 20px - 40px top & bottom */
+    /* 20px - 40px left & right */
+    padding: clamp(1.25rem, 3.15vw, 2.5rem) clamp(1.25rem, 3.15vw, 2.5rem);
+    background-color: white;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    display: flex;
+    grid-column: span 12;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    /* 24px - 48px */
+    gap: clamp(1.5rem, 4vw, 3rem);
+  }
+  .cs-quote {
+    width: 5.375rem;
+    height: auto;
+    position: absolute;
+    right: 0rem;
+    bottom: 0rem;
+    z-index: 0;
   }
 }

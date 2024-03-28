@@ -25,6 +25,10 @@
         --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     }
     
+    a {
+        text-decoration: none;
+    }
+
     body {
         margin: 0;
         padding: 0;
@@ -44,6 +48,20 @@
         color: var(--primary);
         margin-bottom: 0.25rem;
         display: block;
+    }
+
+    .cs-topper-logo {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: .1em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.25rem;
+        display: block;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
     }
     
     .cs-title {
@@ -80,7 +98,7 @@
         padding: 0 (30/16rem);
 
         // Transition Properties
-        color: #000;
+        color: #ffffff;
         background-color: var(--primary);
         display: inline-block;
         position: relative;
@@ -893,7 +911,6 @@
             opacity: 0;
             visibility: hidden;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
-            border-bottom: 5px solid var(--primary);
             /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the cs-drop-li so they don't have weird scattered animations */
             // columns: 2;
             position: absolute;
@@ -1495,47 +1512,6 @@
                 margin-bottom: (32/16rem);
             }
         }
-
-        .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-            color: #000;
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: var(--primary);
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                    background-color: var(--primary);
-                }
-            }
-        }
     }
 }
 
@@ -1612,7 +1588,7 @@
 <---           Footer           -->
 <--- -------------------------- -*/
 
-/* Mobile */
+/* Mobile
 @media only screen and (min-width: 0em) {
     #footer {
         font-size: ~"min(4vw, 1.2em)";
@@ -1761,7 +1737,7 @@
     }
 }
 
-/* Small Desktop */
+
 @media only screen and (min-width: 64em) {
     #footer {
         font-size: ~"min(1.2vw, 1em)";
@@ -1852,11 +1828,103 @@
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #footer {
-            background: #061623;
+
+*/
+
+/*-- -------------------------- -->
+<---           Footer           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #cs-footer-108 {
+        /* 40px - 100px top and bottom */
+        padding: clamp(2.5rem, 7.9vw, 6.25rem) (16/16rem);
+        /* 40px - 50px */
+        padding-bottom: clamp(2.5rem, 7.9vw, 3.125rem);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 1rem;
+        }
+        
+
+        .cs-logo {
+            display: flex;
+            justify-content: center;
+            padding-top: 1rem;
+        }
+        .cs-ul {
+            /* 40px - 60px*/
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #000000;
+        }
+
+        .cs-li {
+            list-style: none;
+            text-align: center;
+            margin-bottom: (20/16rem);
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .cs-link {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 1.55vw, 1.25rem);
+            line-height: 1.5em;
+            text-decoration: none;
+            font-weight: 700;
+            color: black;
+            position: relative;
+
+            &:hover {
+               color: var(--primary);
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-copyright {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.6vw, 1rem);
+            text-align: center;
+            color: #000000;
+            display: block;
+            /* 20px - 28px */
+            margin: clamp(1.25rem, 2.8vw, 1.75rem) auto 0;
         }
     }
 }
+
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+    #cs-footer-108 {
+        .cs-ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-li {
+            /* 44px - 88px */
+            margin: 0 clamp(2.75rem, 6.2vw, 5.5rem) 0 0;
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+        
+    }
+}
+
+                                
