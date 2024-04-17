@@ -195,55 +195,6 @@
     margin: 0;
     color: var(--bodyTextColorWhite);
   }
-  #sbs-1362 .cs-bubbles {
-    font-size: min(2.5vw, .7em);
-    width: 26.1875em;
-    height: 26.6875em;
-    position: absolute;
-    /* changes to 160px at larger desktop */
-    right: -16.25em;
-    /* changes to 30px at large desktop */
-    bottom: -3.125em;
-    z-index: -1;
-  }
-  #sbs-1362 .cs-bubbles:before {
-    /* white border bubble */
-    content: "";
-    width: 20.625em;
-    height: 20.625em;
-    background: transparent;
-    border: 1px solid #1a1a1a;
-    border-radius: 50%;
-    opacity: 1;
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 0;
-    animation-name: floatAnimation;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-  }
-  #sbs-1362 .cs-bubbles:after {
-    /* orange bubble */
-    content: "";
-    width: 16.25em;
-    height: 16.25em;
-    background: var(--primary);
-    opacity: 0.15;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    animation-name: floatAnimation2;
-    animation-duration: 14s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-  }
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -255,18 +206,6 @@
   }
   #sbs-1362 .cs-image-group {
     height: auto;
-  }
-  #sbs-1362 .cs-bubbles {
-    font-size: min(2.5vw, 1em);
-  }
-}
-/* Large Desktop 1600px */
-@media only screen and (min-width: 100rem) {
-  #sbs-1362 .cs-bubbles {
-    margin-left: 40.625rem;
-    right: auto;
-    left: 50%;
-    bottom: 1.875rem;
   }
 }
 /*-- -------------------------- -->

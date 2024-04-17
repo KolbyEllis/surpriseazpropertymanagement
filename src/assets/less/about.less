@@ -215,59 +215,7 @@
             margin: 0;
             color: var(--bodyTextColorWhite);
         }
-  
-        .cs-bubbles {
-            font-size: ~"min(2.5vw, .7em)";
-            width: (419/16em);
-            height: (427/16em);
-            position: absolute;
-            /* changes to 160px at larger desktop */
-            right: (-260/16em);
-            /* changes to 30px at large desktop */
-            bottom: (-50/16em);
-            z-index: -1;
-  
-            &:before {
-                /* white border bubble */
-                content: "";
-                width: (330/16em);
-                height: (330/16em);
-                background: transparent;
-                border: 1px solid #1a1a1a;
-                border-radius: 50%;
-                opacity: 1;
-                position: absolute;
-                display: block;
-                top: 0;
-                right: 0;
-                animation-name: floatAnimation;
-                animation-duration: 5s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-                animation-iteration-count: infinite;
-            }
-  
-            &:after {
-                /* orange bubble */
-                content: "";
-                width: (260/16em);
-                height: (260/16em);
-                background: var(--primary);
-                opacity: 0.15;
-                border-radius: 50%;
-                display: block;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                z-index: -1;
-                animation-name: floatAnimation2;
-                animation-duration: 14s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-                animation-iteration-count: infinite;
-            }
-        }
-    }
+      }
   }
   
   /* Small Desktop - 1024px */
@@ -282,22 +230,6 @@
   
         .cs-image-group {
             height: auto;
-        }
-  
-        .cs-bubbles {
-            font-size: ~"min(2.5vw, 1em)";
-        }
-    }
-  }
-  
-  /* Large Desktop 1600px */
-  @media only screen and (min-width: 100rem) {
-    #sbs-1362 {
-        .cs-bubbles {
-            margin-left: (650/16rem);
-            right: auto;
-            left: 50%;
-            bottom: (30/16rem);
         }
     }
   }
