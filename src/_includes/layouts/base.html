@@ -65,6 +65,15 @@
                 {{ client.name }}
             {% endif %}
         </title>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBFCNNM5CW"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QBFCNNM5CW');
+        </script>
     </head>
     <body>
         <!--Screen reader skip main nav-->
