@@ -521,16 +521,24 @@
             border: none;
 
             &::placeholder {
-                padding-top: (16/16rem);
                 color: #fff;
                 opacity: 0.5;
             }
         }
 
         .cs-textarea {
+            font-family: inherit;
+            font-size: (16/16rem);
+            width: 100%;
             height: (120/16rem);
+            padding: (16/16rem) (24/16rem); /* top/bottom 16px, left/right 24px */
+            box-sizing: border-box;
+            color: #fff;
+            background-color: #484848;
+            border: none;
+            line-height: 1.5em;
             margin-bottom: (32/16rem);
-            padding-top: (16/16rem);
+            resize: vertical; /* optional: lets user stretch it */
         }
 
         .cs-wrapper {
