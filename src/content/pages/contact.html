@@ -62,27 +62,29 @@ permalink: 'contact/'
             </ul>
         </div>
         <!--Form-->
-        <form class="cs-form" id="cs-form-1403" name="Contact Form" method="post" netlify>
-            <h3 class="cs-h3">Make Appointment</h3>
-            <label class="cs-label">
-                Name
-                <input class="cs-input" required type="text" id="name-1403" name="name" placeholder="Name">
-            </label>
-            <label class="cs-label cs-email">
-                Email
-                <input class="cs-input" required type="email" id="email-1403" name="email" placeholder="Email">
-            </label>
-            <label class="cs-label cs-phone">
-                Phone
-                <input class="cs-input" required type="number" id="phone-1403" name="phone" placeholder="Phone">
-            </label>
-            <label class="cs-label">
-                Message
-                <textarea class="cs-input cs-textarea" required name="Message" id="message-1403" placeholder="Write message..."></textarea>
-            </label>
-            <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
-        </form>
-</iframe>
+<form class="cs-form" id="cs-form-1403" name="Contact Form" method="post" data-netlify="true" data-netlify-recaptcha="true">
+    <input type="hidden" name="form-name" value="Contact Form">
+    <h3 class="cs-h3">Make Appointment</h3>
+    <label class="cs-label">
+        Name
+        <input class="cs-input" required type="text" id="name-1403" name="name" placeholder="Name">
+    </label>
+    <label class="cs-label cs-email">
+        Email
+        <input class="cs-input" required type="email" id="email-1403" name="email" placeholder="Email">
+    </label>
+    <label class="cs-label cs-phone">
+        Phone
+        <input class="cs-input" required type="number" id="phone-1403" name="phone" placeholder="Phone">
+    </label>
+    <label class="cs-label">
+        Message
+        <textarea class="cs-input cs-textarea" required name="Message" id="message-1403" placeholder="Write message..."></textarea>
+    </label>
+    <!-- ✅ CAPTCHA goes here -->
+    <div data-netlify-recaptcha="true"></div>
+    <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+</form>
     </div>
 </section>
 
