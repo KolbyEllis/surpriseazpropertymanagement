@@ -173,6 +173,89 @@
         color: #fff;
         cursor: pointer;
     }
+
+    /* Custom Dropdown Styles */
+    #contact-1403 .custom-dropdown {
+        position: relative;
+        width: 100%;
+        background-color: white;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #contact-1403 .custom-selected {
+        padding: 1.5rem;
+        color: var(--headerColor);
+        background-color: white;
+        border-radius: 0.5rem;
+        position: relative;
+        font-size: 1rem;
+    }
+
+    #contact-1403 .custom-selected::after {
+        content: '';
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #767676;
+        transition: transform 0.3s ease;
+    }
+
+    #contact-1403 .custom-dropdown.active .custom-selected::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    #contact-1403 .custom-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    #contact-1403 .custom-dropdown.active .custom-options {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    #contact-1403 .custom-options li {
+        padding: 1rem 1.5rem;
+        color: var(--headerColor);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        list-style: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    #contact-1403 .custom-options li:last-child {
+        border-bottom: none;
+    }
+
+    #contact-1403 .custom-options li:hover {
+        background-color: #f7f7f7;
+    }
+
+    #contact-1403 .custom-options li.selected {
+        background-color: var(--primary);
+        color: white;
+    }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
