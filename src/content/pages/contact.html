@@ -66,21 +66,39 @@ permalink: 'contact/'
     <input type="hidden" name="form-name" value="Contact Form">
     <h3 class="cs-h3">Make Appointment</h3>
     <label class="cs-label">
-        Name
-        <input class="cs-input" required type="text" id="name-1403" name="name" placeholder="Name">
+        First Name
+        <input class="cs-input" required type="text" id="first-name-1333" name="First Name" placeholder="First Name">
+    </label>
+    <label class="cs-label">
+        Last Name
+        <input class="cs-input" required type="text" id="last-name-1333" name="Last Name" placeholder="Last Name">
     </label>
     <label class="cs-label cs-email">
         Email
-        <input class="cs-input" required type="email" id="email-1403" name="email" placeholder="Email">
+        <input class="cs-input" required type="email" id="email-1333" name="Email" placeholder="Email">
     </label>
     <label class="cs-label cs-phone">
         Phone
-        <input class="cs-input" required type="number" id="phone-1403" name="phone" placeholder="Phone">
+        <input class="cs-input" required type="text" id="phone-1333" name="Phone" placeholder="Phone">
     </label>
     <label class="cs-label">
-        Message
-        <textarea class="cs-input cs-textarea" required name="Message" id="message-1403" placeholder="Write message..."></textarea>
+        Purpose of Inquiry
+        <div class="custom-dropdown" tabindex="0">
+          <div class="custom-selected">Please Select An Option</div>
+          <ul class="custom-options">
+            <li data-value="I am a property owner looking for management services">I am a property owner looking for management services</li>
+            <li data-value="I am looking to rent as a tenant">I am looking to rent as a tenant</li>
+            <li data-value="Other">Other</li>
+          </ul>
+          <input type="hidden" name="Inquiry Purpose" required>
+        </div>
     </label>
+
+    <label class="cs-label">
+        Message
+        <textarea class="cs-input cs-textarea" required name="Message" id="message-1333" placeholder="Write message..."></textarea>
+    </label>
+
     <!-- ✅ CAPTCHA goes here -->
     <div data-netlify-recaptcha="true"></div>
     <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
@@ -169,5 +187,7 @@ permalink: 'contact/'
         </ul>
     </div>
 </section>
+
+<script src="/assets/js/contact.js"></script>
 
 {% endblock %}
