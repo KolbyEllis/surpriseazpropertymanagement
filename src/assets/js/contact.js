@@ -99,3 +99,61 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Contact form spam phrase blocking
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('cs-form-1403');
+
+    if (!contactForm) {
+        return;
+    }
+
+    const blockedPhrases = [
+        "i currently own several rental units across arizona and am looking for a dependable property manager who can oversee these properties effectively. as i work toward expanding my real estate portfolio, managing everything on my own has become increasingly demanding, and i'm reaching the point where i need dedicated support to ensure everything continues to run smoothly."
+    ];
+
+    function normalizeText(text) {
+        return text
+            .toLowerCase()
+            .replace(/\u2018|\u2019/g, "'")
+            .replace(/\s+/g, " ")
+            .trim();
+    }
+
+    function removeSpamError() {
+        const existingError = contactForm.querySelector('.cs-spam-error');
+        if (existingError) {
+            existingError.remove();
+        }
+    }
+
+    function showSpamError() {
+        removeSpamError();
+        const error = document.createElement('p');
+        error.className = 'cs-spam-error';
+        error.textContent = 'Your message could not be submitted. Please reword and try again.';
+        error.setAttribute('role', 'alert');
+        error.style.color = '#b42318';
+        error.style.marginTop = '1rem';
+        contactForm.appendChild(error);
+    }
+
+    contactForm.addEventListener('submit', function(event) {
+        const messageField = contactForm.querySelector('textarea[name="Message"]');
+        const messageText = messageField ? normalizeText(messageField.value) : '';
+        const isBlocked = blockedPhrases.some(function(phrase) {
+            return messageText.includes(phrase);
+        });
+
+        if (isBlocked) {
+            event.preventDefault();
+            showSpamError();
+            if (messageField) {
+                messageField.focus();
+            }
+            return;
+        }
+
+        removeSpamError();
+    });
+});
