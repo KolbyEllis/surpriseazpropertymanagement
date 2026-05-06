@@ -100,6 +100,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('cs-form-1403');
+    if (!contactForm) {
+        return;
+    }
+
+    const query = new URLSearchParams(window.location.search);
+    const isSubmitted = query.get('submitted') === 'true';
+
+    if (!isSubmitted) {
+        return;
+    }
+
+    const successMessage = document.createElement('p');
+    successMessage.className = 'cs-submit-success';
+    successMessage.textContent = 'Thanks! Your message was submitted successfully.';
+    successMessage.setAttribute('role', 'status');
+    successMessage.style.color = '#067647';
+    successMessage.style.marginBottom = '1rem';
+    successMessage.style.fontWeight = '600';
+
+    contactForm.insertBefore(successMessage, contactForm.firstChild);
+
+    if (window.history && window.history.replaceState) {
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+});
+
 // Contact form spam phrase blocking
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('cs-form-1403');
